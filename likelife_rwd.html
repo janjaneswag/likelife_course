@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Life喜歡生活乾燥花-秋季花藝課程</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.0-web/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', 'Noto Sans TC';
+            color: #44442F;
+
+        }
+
+        p {
+            font-size: small;
+        }
+
+        a {
+            color: #44442F;
+        }
+
+        a:hover {
+            color: #DD9976
+        }
+
+
+        .navbar {
+            background-color: #44442F;
+            width: 100%;
+            position: fixed;
+            z-index: 2;
+            transition: 0.6s;
+            opacity: 1;
+        }
+
+        .navbar.hide {
+            transform: translateY(-66px);
+            opacity: 0.3;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #F8F3ED;
+            text-decoration: none;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:focus,
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #DD9976 !important;
+            font-weight: 600;
+        }
+
+
+        .cover-area {
+            width: 100%;
+            height: 500px;
+            background: url("./IMG/banner/about/cover.jpg") no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            top: 50px;
+
+        }
+
+        /* .cover-area::after {
+            content: "";
+            display: block;
+            background: url('./SVG/bg-top.svg') no-repeat center center;
+            position: absolute;
+            background-size: cover;
+            bottom: -300px;
+            width: 100%;
+            height: 150px;
+            z-index: 1; */
+
+        .bg-top {
+            background: url('./SVG/bg-top.svg') no-repeat center center;
+            position: relative;
+            width: 100%;
+            height: 550px;
+            background-size: cover;
+            z-index: -1;
+            top: 300px;
+        }
+
+        .text-tag {
+            color: #DD9976;
+        }
+
+        .text-tag::after {
+            content: "";
+            width: 80px;
+            height: 1px;
+            background: #DD9976;
+            position: absolute;
+            left: 60px;
+            bottom: 20px;
+            top: 0;
+            margin: auto;
+        }
+
+        .text-area {
+            line-height: 1.2rem;
+        }
+
+        .img-title {
+            top: 15%;
+            left: 0;
+            right: 0;
+            color: #fff;
+            font-family: 'Lora', serif;
+            font-size: .8rem;
+        }
+
+        .bn-text {
+            opacity: 1;
+            transform: translateY(50px);
+            /* transition: 1s ease-out; */
+        }
+
+        /* .bn-text.fade {
+            opacity: 1;
+            transform: translateY(200px);
+        } */
+
+        .topic3 img {
+            transform: translate(60px, 60px);
+            opacity: 0.3;
+            transition: 2s ease-in-out;
+        }
+
+        .topic3 img.move {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        .topic1 img {
+            transform: translate(-80px, -80px);
+            opacity: 0.3;
+            transition: 2s ease-in-out;
+        }
+
+        .topic1 img.move {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        .topic2 img {
+            transform: translate(-90px, 100px);
+            opacity: 0.3;
+            transition: 2s ease-in-out;
+        }
+
+        .topic2 img.move {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+
+
+        .topic3 span,
+        .topic1 span,
+        .topic2 span {
+            opacity: 0;
+            transform: translateY(-80px);
+            transition: 1s steps(10, end);
+        }
+
+        .topic3 span.fade,
+        .topic1 span.fade,
+        .topic2 span.fade {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+
+        .video-info {
+            opacity: 0.2;
+            transform: translateY(50px);
+            transition: 1s ease-out;
+        }
+
+        .video-info.fade {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .video-bgc {
+            background-color: #F8F3ED;
+        }
+
+        .btn {
+            color: #44442F;
+        }
+
+        .btn:hover {
+            color: #F8F3ED;
+            background-color: #44442F;
+        }
+
+        /* .line::after {
+            content: "";
+            width: 500px;
+            height: 100px;
+            background: url("SVG/vertical-line.svg") no-repeat;
+            position: absolute;
+            top: 70px;
+            margin: auto;
+
+        } */
+
+        .line {
+            height: 90px;
+            border-right: 1px solid #44442F;
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: 1.2s steps(12, end);
+        }
+
+        .line.move {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .icon {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .icon img {
+            object-position: 0 -50px;
+        }
+
+        .icon-wrap-1 {
+            opacity: 0;
+            -webkit-transform: translateX(-60px);
+            /* transition: 0.6s ease-out; */
+            animation: icon-animation .8s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .icon-wrap-2 {
+            opacity: 0;
+            -webkit-transform: translateX(-60px);
+            /* transition: 0.6s ease-out; */
+            animation: icon-animation .8s;
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        .icon-wrap-3 {
+            opacity: 0;
+            -webkit-transform: translateX(-60px);
+            /* transition: 0.6s ease-out; */
+            animation: icon-animation .8s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        .icon-wrap-4 {
+            opacity: 0;
+            -webkit-transform: translateX(-60px);
+            /* transition: 0.6s ease-out; */
+            animation: icon-animation .8s;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
+            /* 回到最後面 不然會跑到第一個狀態 */
+        }
+
+        @-webkit-keyframes icon-animation {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+
+        }
+
+
+        #course-1-tab,
+        #course-2-tab {
+            color: #44442F;
+        }
+
+        .carousel-section {
+            width: 550px;
+            height: 400px;
+        }
+
+        .img-wrap {
+            position: absolute;
+            left: 0;
+        }
+
+        .img-wrap img {
+            /* opacity: 0; */
+            transition: .5s;
+        }
+
+        .slider-dots li {
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+        }
+
+        .slider-dots {
+            bottom: 0;
+        }
+
+        /* .arrow {
+            top: 400px;
+            cursor: pointer;
+        } */
+
+        .border-left {
+            border-left: 2px solid#DD9976 !important;
+        }
+
+        .note-border {
+            border: 1.5px solid #DD9976;
+        }
+
+        .deco1,
+        .deco2 {
+            width: 150px;
+            height: 300px;
+            z-index: 1;
+        }
+
+        .deco1 {
+            bottom: 40px;
+            right: -7%;
+        }
+
+        .deco2 {
+            top: 30px;
+            left: -11%;
+        }
+
+        .deco1 img {
+            transform: rotate(-40deg);
+            transition: 1.7s ease-out;
+        }
+
+        .deco1 img.move {
+            transform: rotate(20deg);
+        }
+
+
+        .deco2 img {
+            transform: rotate(30deg);
+            transition: 1.7s ease-out;
+        }
+
+        .deco2 img.move {
+            transform: rotate(-15deg);
+        }
+
+        .course-section-1 {
+            background-color: #F8F3ED;
+        }
+
+        .slick-list {
+            width: 1336px;
+            height: 250px;
+            overflow: hidden;
+            left: 0;
+
+        }
+
+        .slick-track {
+            width: 2400px;
+            height: 250px;
+            /* left: -284px; */
+
+        }
+
+        .carousel--card {
+            width: 100%;
+            height: 70%;
+            transform: scale(1);
+            transition: 0.6s ease;
+            /* overflow: hidden; */
+        }
+
+        .carousel--card:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 10px #F8F3ED;
+        }
+
+
+        .carousel--card img {
+            object-fit: contain;
+            object-position: 0 -50%;
+        }
+
+        .slider-arrow {
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .icon-left {
+            top: -30px;
+            right: 220px;
+        }
+
+        .icon-right {
+            top: -30px;
+            right: 180px;
+        }
+
+        .form-pic {
+            height: 700px;
+            object-fit: cover;
+
+        }
+
+        .form-control {
+            border: 1px solid#dee2e6;
+        }
+
+        .card {
+            border: 1px solid #F8F3ED;
+        }
+
+        .card-header {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .card .card-header {
+            background-color: #F8F3ED;
+        }
+
+
+        .bg-bottom {
+            background: url('./SVG/bg-bottom.svg') no-repeat center center;
+            width: 100%;
+            height: 550px;
+            background-size: cover;
+        }
+
+
+        .shop-pic-wrap {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .socail-media-icon {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .info-a,
+        .info-p {
+            color: #dee2e6;
+            font-size: 0.6rem;
+        }
+
+        .info-a:hover {
+            color: #DD9976;
+        }
+
+        .logo-wrap {
+            width: 60px;
+            height: 60px;
+        }
+
+        .btn-light:focus {
+            box-shadow: none;
+        }
+
+        .btn-light {
+            background-color: #44442F;
+            color: #F8F3ED;
+        }
+
+        .btn-light:hover {
+            background-color: #DD9976;
+            color: #44442F;
+        }
+
+        .card .btn {
+            background-color: #F8F3ED;
+            color: #44442F;
+            width: 100%;
+        }
+
+        .card .btn-link {
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .contact-info {
+            background-color: #44442F;
+        }
+
+        .subscribe-area,
+        .socail-media-area,
+        .catelog-area {
+            color: #F8F3ED;
+        }
+
+        footer h6 {
+            color: #F8F3ED;
+        }
+
+        .fixed-button {
+            right: 0;
+            bottom: 20%;
+            z-index: 5;
+            opacity: 0;
+            transition: .8s linear;
+
+        }
+
+        .fixed-button.fade {
+            opacity: 0.6;
+
+        }
+
+        @media (max-width: 768px) {
+
+            .h3,
+            h3 {
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            .h6,
+            h6 {
+                font-weight: 300;
+            }
+
+            p {
+                font-size: smaller;
+            }
+
+            .bg-top {
+                width: 100%;
+                height: 500px;
+            }
+
+            .bn-text {
+                transform: translateY(100px);
+            }
+
+            .text-tag::after {
+                content: "";
+                width: 50px;
+                height: 1px;
+                background: #DD9976;
+                position: absolute;
+                left: 55px;
+                bottom: 20px;
+                top: 0;
+                margin: auto;
+            }
+
+            .topic3 {
+                width: 100%;
+                height: 80%;
+                margin: 0 !important;
+                padding: 0 !important;
+                object-fit: contain;
+                /* display: flex;
+                align-items: center; */
+            }
+
+            .topic2 {
+                width: 100%;
+                height: 50%;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .topic1 {
+                margin: 0 !important;
+                padding-bottom: 16px !important;
+            }
+
+            .topic3 img {
+                transform: translate(30px, 30px);
+                opacity: 0.3;
+                transition: 2s ease-in-out;
+            }
+
+
+            .topic1 img {
+                transform: translate(-20px, -50px);
+                opacity: 0.3;
+                transition: 2s ease-in-out;
+            }
+
+
+            .topic2 img {
+                transform: translate(-60px, 80px);
+                opacity: 0.3;
+                transition: 2s ease-in-out;
+            }
+
+            .topic3 span,
+            .topic1 span,
+            .topic2 span {
+                opacity: 0;
+                transform: translateY(-60px);
+                transition: 1s steps(10, end);
+            }
+
+
+            .img-title {
+                font-size: .5rem;
+            }
+
+            .video-info {
+                display: none;
+            }
+
+            .video-info.fade {
+                display: none;
+            }
+
+            .icon {
+                width: 150px;
+                height: 150px;
+            }
+
+            .line {
+                height: 70px;
+            }
+
+            .carousel-section {
+                width: 100%;
+                height: 100%;
+            }
+
+            .img-wrap img {
+                object-fit: cover;
+            }
+
+            .deco1,
+            .deco2 {
+                width: 100px;
+                z-index: 1;
+            }
+
+            .deco1 {
+                bottom: -50px;
+                right: 0;
+            }
+
+            .deco1 img {
+                transform: rotate(-40deg);
+            }
+
+            .deco1 img.move {
+                transform: rotate(20deg);
+            }
+
+            .deco2 img {
+                transform: rotate(-20deg);
+            }
+
+            .deco2 img.move {
+                transform: rotate(30deg);
+            }
+
+
+            .carousel-section {
+                width: 100%;
+                height: 400px;
+            }
+
+            .course-collection .col-sm-12 {
+                padding-left: 30px;
+            }
+
+            .nav-tabs .nav-item {
+                margin: 0 !important;
+            }
+
+            .icon-left {
+                margin: 0 15px !important;
+                right: 50%;
+            }
+
+            .icon-right {
+                margin: 0 15px !important;
+                right: 40%;
+            }
+
+            .slick-list {
+                width: 100%;
+            }
+
+            .card-body span {
+                font-size: 1rem !important;
+            }
+
+            .col-form-right {
+                display: none;
+            }
+
+            .form-section .col-6 {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+
+            .faq-section .col-10 {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+
+            .fixed-button {}
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <header class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-dark px-0 ">
+            <a class="navbar-brand mx-2 pl-2" href="#">
+                <img src="./SVG/logo-light.svg" width="40" height="40" alt="喜歡生活乾燥花店">
+            </a>
+
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+
+            <div class="collapse navbar-collapse w-100 mx-0 pr-0 " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+
+                    <li class="nav-item px-4 ">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#course">COURSE</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item px-4 ">
+                        <a class="nav-link" href="#signup">SIGN UP</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- BANNER ENTRY -->
+
+    <div class="container-fluid" id="top">
+
+        <div class="row cover-section position-relative">
+
+            <div class="col-12 cover-area position-absolute"></div>
+
+            <!-- BG -->
+
+            <div class="col-12 bg-top"></div>
+
+            <!-- TITLE -->
+
+            <div class="col-12 ">
+                <div class="bn-text text-area text-center pb-5 ">
+
+                    <h3 class="title-section">喜歡生活乾燥花店｜秋季花藝課程</h3>
+                    <br>
+
+                    <h6 class="subtitle-section" style="color: #DD9976;">在繁忙的生活中給予自己一個舒壓的空間與時間，陶冶情操放鬆心情</h6>
+
+                    <p class="p-text">Find Your Inner Beauty with Floral Design Courses
+                        <br>
+                        Let’s feel the peaceful atmosphere
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION-1:ABOUT -->
+
+    <div class="container">
+
+        <!-- TITLE TAG -->
+
+        <div class="row tag-section pr-5 justify-content-end mx-5 mt-5 " id="about">
+
+            <div class=" position-relative mt-5">
+                <p class=" text-tag">About</p>
+            </div>
+        </div>
+
+        <!-- TITLE -->
+
+        <div class=" row main-about my-4">
+
+            <div class="col-sm-12">
+
+                <div class="text-area text-center my-4">
+
+                    <h3 class="title-section mb-0">你也喜歡好好生活嗎？</h3>
+
+                    <p class="p-text">The Course is Perfect For You If You…</p>
+
+                </div>
+
+                <div class="topic-info d-flex justify-content-center">
+                    <div class=" col-sm-4 col-md-4 pl-3 position-relative">
+
+                        <div class="topic1 w-30 pb-5 mt-5 mr-3 position-relative">
+                            <img class="w-100 img-fluid" src="./IMG/banner/about/section_1-1.jpg" alt="">
+                            <div class="img-title text-center position-absolute">
+                                <span>Need Healing</span>
+                                <br>
+                                <span>需要療癒</span>
+                            </div>
+
+                        </div>
+
+                        <div class="topic2 w-30 px-5 ml-auto position-relative ">
+                            <img class="w-100 img-fluid" src="./IMG/banner/about/section_1-2.jpg" alt="">
+                            <div class="img-title text-center position-absolute">
+                                <span>Flower Lovers</span>
+                                <br>
+                                <span>喜愛花草</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                        <div class="topic3 w-30 py-3 px-5 mt-auto position-relative d-flex ml-5">
+                            <img class="w-100 img-fluid" src="./IMG/banner/about/section_1-3.jpg" alt="">
+                            <div class="img-title text-center position-absolute">
+                                <span>Create Memories</span>
+                                <br>
+                                <span>想與閨蜜/情人創造回憶</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main -->
+
+        <div class="row video-section my-4">
+            <div class="col-sm-12">
+                <div class="text-area text-center my-4">
+
+                    <h3 class="title-section mb-0">學習重點</h3>
+
+                    <p class="p-text">Learning Points</p>
+
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 d-flex video-bgc mt-4 px-0 ">
+                <div class="video-info mx-auto my-auto">
+                    <div class="text-section mt-3">
+                        <span>如果你也喜歡生活</span><br>
+                        <span>不要錯過我們最新的課程！</span>
+                    </div>
+                    <br>
+                    <div class="text-btn">
+                        <a class="btn btn-outline-secondary rounded-0 mb-3 text-decoration-none" href="#course">
+                            +10月秋季花藝課程
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-8 mt-4 px-0 ">
+                <div class="embed-responsive embed-responsive-16by9 ">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6yTOWk2mBeY" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- problem -->
+
+        <!-- TITLE  -->
+        <div class="row usp-title-section">
+
+            <div class="col-sm-12 my-4">
+
+                <div class="text-area text-center my-4 position-relative">
+
+                    <h3 class="title-section mb-0">喜歡生活 花藝課程，將帶給你...</h3>
+
+                    <p class="p-texts">What Will You Get？</p>
+
+                    <!-- <span class="line"></span> -->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-2">
+            <div class="col-6 line"></div>
+        </div>
+
+        <!-- Main -->
+        <div class="row usp-section d-flex mt-5">
+
+            <div class="col-sm-12 col-md-3 icon-wrap-1  text-center">
+                <div class="icon m-auto">
+                    <img class="w-100 icon-1" src="./IMG/banner/about/section_2-1..jpg" alt="學習花材知識、花藝創作">
+                </div>
+
+                <p class="my-3">學習花材知識、花藝創作</p>
+            </div>
+
+            <div class=" col-sm-12 col-md-3 icon-wrap-2 text-center">
+                <div class="icon m-auto">
+                    <img class="w-100 icon-2" src="./IMG/banner/about/section_2-2..jpg" alt="擁有專屬的手作花藝展示品">
+                </div>
+
+                <p class="my-3">擁有專屬的手作花藝展示品</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3 icon-wrap-3  text-center">
+                <div class="icon m-auto">
+                    <img class="w-100 icon-3" src="./IMG/banner/about/section_2-3.jpg" alt="發揮生活上的藝術靈感">
+                </div>
+
+                <p class="my-3">發揮生活上的藝術靈感</p>
+            </div>
+
+            <div class="col-sm-12 col-md-3 icon-wrap-4  text-center">
+                <div class="icon m-auto">
+                    <img class="w-100 icon-4" src="./IMG/banner/about/section_2-4.jpg" alt="修身養性、培養優雅的專注力">
+                </div>
+
+                <p class="my-3">修身養性、培養優雅的專注力</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SECTION-2:COURSE -->
+
+    <div class="container-fluid course-section-1">
+
+        <div class="container position-relative  pb-3 mb-5">
+
+            <!-- TITLE TAG -->
+            <div class="row tag-section mx-5 mt-5 pr-5 justify-content-end  pt-4" id="course">
+
+                <div class=" position-relative mt-5">
+                    <p class="text-tag course-tag">Course</p>
+                </div>
+            </div>
+
+            <!-- COURSE TABLE -->
+
+            <div class=" row main-course my-4">
+
+                <!-- TITLE -->
+
+                <div class="col-sm-12">
+
+                    <div class="text-area text-center my-3">
+
+                        <h3 class="title-section mb-0">10月花藝課程</h3>
+
+                        <p class="p-text">Let’s Stay Tuned</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center my-5 pb-5">
+
+                <!-- DECO ICON -->
+
+                <div class="deco1 position-absolute">
+                    <img class="w-100 " src="./SVG/demo-1.svg" alt="">
+                </div>
+
+                <div class="deco2 position-absolute">
+                    <img class="w-100 " src="./SVG/demo-2.svg" alt="">
+                </div>
+
+
+                <!-- 頁籤boostrap 按鈕 -->
+                <ul class="nav nav-tabs w-40" id="myTab" role="tablist">
+                    <li class="nav-item mx-5">
+                        <a class="nav-link active" id="course-1-tab" data-toggle="tab" href="#course-1" role="tab"
+                            aria-controls="course-1" aria-selected="true">月眉型花花圈課程</a>
+                    </li>
+                    <li class="nav-item ml-auto mr-5">
+                        <a class="nav-link" id="course-2-tab" data-toggle="tab" href="#course-2" role="tab"
+                            aria-controls="course-2" aria-selected="false">歐式壁飾門楣</a>
+                    </li>
+
+                </ul>
+
+                <!-- 頁籤boostrap 內容 -->
+
+                <div class="tab-content" id="myTabContent">
+
+                    <!-- 頁籤boostrap 內容1 -->
+
+                    <div class="tab-pane fade show active" id="course-1" role="tabpanel" aria-labelledby="course-1-tab">
+
+                        <div class="row d-flex">
+
+                            <!-- 頁籤內容-左邊 -->
+
+                            <div class="col-sm-12 col-md-7 course-wrap mt-4 px-0">
+
+                                <div class="carousel-section position-relative mx-auto ">
+                                    <div class="img-box">
+                                        <div class="img-wrap w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_1.JPG"
+                                                alt="月眉型花花圈">
+                                        </div>
+                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_2.JPG"
+                                                alt="月眉型花花圈">
+                                        </div>
+                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_3.JPG"
+                                                alt="月眉型花花圈">
+                                        </div>
+                                    </div>
+
+
+                                    <ul
+                                        class="slider-dots d-flex position-absolute list-unstyled justify-content-center w-100">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+
+                                    <!-- <div class="arrow position-absolute d-flex my-2">
+
+                                        <div class="carousel-arrow-left mx-3">
+                                            <img src="./icomoon/SVG/arrow-left.svg" alt="">
+                                        </div>
+
+                                        <div class="carousel-arrow-right mx-3">
+                                            <img src="./icomoon/SVG/arrow-right.svg" alt="">
+                                        </div>
+
+                                    </div> -->
+                                </div>
+
+                            </div>
+
+                            <!-- 頁籤內容-右邊 -->
+                            <div class="col-sm-12 col-md-5 course-content my-auto ">
+                                <div class="content-wrap px-3">
+
+                                    <div class="course-date mt-5 px-2 ">
+                                        <h6 class="border-left px-2 ">日期:</h6>
+                                        <p>10/17 (六) 14:00 ~ 16:00</p><br>
+                                    </div>
+
+                                    <div class="course-info px-2">
+                                        <h6 class="border-left px-2 ">課程大綱：</h6><br>
+                                        <p>
+                                            。認識花圈所需花材 <br>
+                                            。月眉型花圈的編排與設計技巧 <br>
+                                            。月眉型花圈的插花技巧<br>
+                                            。月眉型花圈保存與維護要領<br>
+                                        </p>
+                                    </div>
+
+                                    <div class="note px-2">
+
+                                        <p class="note-border px-2 py-2"><i class="far fa-clipboard mr-1"></i>
+                                            課程時間為 2 小時左右，若尚未完成的學員
+                                            可以回家完成，課堂內老師將不藏私將所有
+                                            技法傳授給大家喔！
+                                        </p>
+
+                                        <br>
+
+                                        <h6 class="border-left px-2 ">費用：（含材料費）</h6>
+                                        <p>每人費用 $2,000 元,兩人優惠 $3,600 元</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 頁籤boostrap 內容2-->
+
+                    <div class="tab-pane fade" id="course-2" role="tabpanel" aria-labelledby="course-2-tab">
+
+                        <div class="row d-flex">
+
+                            <!-- 頁籤內容-左邊 -->
+
+                            <div class="col-sm-12 col-md-7 course-wrap mt-4 px-0">
+
+                                <div class="carousel-section position-relative mx-auto">
+                                    <div class="img-box">
+                                        <div class="img-wrap w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_5.JPG"
+                                                alt="歐式壁飾門楣">
+                                        </div>
+                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_6.JPG"
+                                                alt="歐式壁飾門楣">
+                                        </div>
+                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                            <img class="w-100 h-100" src="./IMG/banner/course/course_7.JPG"
+                                                alt="歐式壁飾門楣">
+                                        </div>
+                                    </div>
+
+                                    <ul
+                                        class="slider-dots d-flex position-absolute list-unstyled justify-content-center w-100">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+
+
+                                    <!-- <div class="arrow position-absolute d-flex my-2 ">
+
+                                        <div class="carousel-arrow-left mx-3">
+                                            <img src="./icomoon/SVG/arrow-left.svg" alt="">
+                                        </div>
+
+                                        <div class="carousel-arrow-right mx-3">
+                                            <img src="./icomoon/SVG/arrow-right.svg" alt="">
+                                        </div>
+
+                                    </div> -->
+                                </div>
+
+                            </div>
+
+                            <!-- 頁籤內容-右邊 -->
+                            <div class="col-sm-12 col-md-5 course-content my-auto ">
+                                <div class="content-wrap px-3">
+                                    <div class="course-date mt-5 px-2 ">
+                                        <h6 class="border-left px-2 ">日期:</h6>
+                                        <p>10/24 (六) 14:00 ~ 16:00</p><br>
+                                    </div>
+                                    <div class="course-info px-2">
+                                        <h6 class="border-left px-2 ">課程大綱：</h6><br>
+                                        <p>
+                                            。認識歐式壁飾門楣所需花材<br>
+                                            。門楣的編排與設計技巧 <br>
+                                            。壁飾門楣的插花技巧<br>
+                                            。壁飾門楣保存與維護要領<br>
+                                        </p>
+                                    </div>
+                                    <div class="note px-2">
+
+                                        <p class="note-border px-2 py-2"><i class="far fa-clipboard mr-1"></i>
+                                            課程時間為 2 小時左右，若尚未完成的學員
+                                            可以回家完成，課堂內老師將不藏私將所有
+                                            技法傳授給大家喔！
+                                        </p>
+
+                                        <br>
+
+
+                                        <h6 class="border-left px-2 ">費用：（含材料費）</h6>
+                                        <p>每人費用 $1,100 元,兩人優惠 $2,000元</p>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SECTION-2:COURSE COLLECTIONS -->
+
+    <div class="container-fluid collection-wrap px-0 position-relative">
+
+        <!-- TITLE -->
+        <div class="row course-collection my-4 w-100">
+
+            <div class="col-sm-12 ">
+
+                <div class="text-area text-center my-3">
+
+                    <h3 class="title-section mb-0">教室環境與作品精選</h3>
+
+                    <p class="p-text">Collections For You</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ARROW -->
+
+        <div class="col-12">
+
+            <div class="row slider-arrow">
+
+                <div class="icon-left position-absolute">
+                    <img src="./icomoon/SVG/keyboard_arrow_left.svg" alt="">
+                </div>
+
+                <div class="icon-right position-absolute">
+                    <img src="./icomoon/SVG/keyboard_arrow_right.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLLECTION SLIDER  -->
+
+        <div class="slick-list draggable mx-auto position-relative ">
+            <div class="slick-track d-flex align-items-end position-absolute">
+
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/classroom_1.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/classroom_2.jpeg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/classroom_3.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/classroom_4.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/flower_1.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/flower_2.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/flower_3.jpg" alt="">
+                </div>
+                <div class="carousel--card mx-3">
+                    <img class="w-100 img-fluid" src="./IMG/banner/share/flower_4.jpg" alt="">
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SECTION-3:FAQ -->
+
+    <div class="container">
+
+        <div class="row tag-section mx-5 mt-5 pr-5 justify-content-end  pt-4 " id="faq">
+
+            <div class=" position-relative mt-5 ">
+                <p class="text-tag">FAQ</p>
+            </div>
+        </div>
+
+        <!-- TITLE -->
+
+        <div class="row main-faq my-4">
+
+            <div class="col-sm-12">
+
+                <div class="text-area text-center my-4">
+
+                    <h3 class="title-section mb-0">常見問題</h3>
+
+                    <p class="p-text">FAQ</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN FAQ -->
+
+        <div class="row faq-section justify-content-center">
+            <div class="col-10">
+
+                <div id="accordion" class="text-left">
+
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-caret-down"></i> &nbsp
+                                    匯款資訊
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body font-weight-light ">
+                                <span style="font-size: 1.2rem; color: #DD9976;">(必須在報名後 12
+                                    小時內匯款)</span> <br>
+                                王道銀行：048 <br>
+                                帳號：01000201258388 <br>
+                                匯款完成後請傳訊息至 官方Line@ <br>
+                                並提供末五碼重複確認喔!<br>
+                                <a class="text-decoration-none font-weight-bolder border-bottom pb-1"
+                                    href=" http://line.me/ti/p/%40zwh6699v">點我加入官方Line@</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link  collapsed" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-caret-down"></i> &nbsp
+                                    注意事項
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body font-weight-light">
+                                。報名一律需填寫資料至表單，恕不接受其他私訊報名 <br>
+                                。準時 14:00 開課，請勿遲到 <br>
+                                。課程請勿攜帶他人一起製作 <br>
+                                。收到款項,經確認回覆後才算報名成功 <br>
+                                。課程恕無法退費 僅能更換時間 <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link  collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fas fa-caret-down"></i> &nbsp
+                                    請問沒有學過花藝可以報名嗎？
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordion">
+                            <div class="card-body font-weight-light">
+                                可以，我們會每個步驟帶著學員實作，沒有經驗的學員也可以報名
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link  collapsed" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fas fa-caret-down"></i> &nbsp
+                                    上課時間為何？我動作感覺會很慢怎麼辦？
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body font-weight-light">
+                                課程從 14:00 準時開課，我們課程會到 16:00，會有花藝師與助教協助，請不用擔心
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link  collapsed" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="fas fa-caret-down"></i> &nbsp
+                                    請問課程地點與交通方式？
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body font-weight-light">
+                                地址：民生東路三段73巷1號（中山國中捷運站,步行約5分鐘）<br>
+                                建議搭捷運前來上課，會比較方便 <br>
+                                Google Map：<a class="text-decoration-none font-weight-bolder border-bottom pb-1"
+                                    href="http://bit.ly/2k3zGcv">點此</a> <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SECTION-4:SIGN UP -->
+
+    <div class="container">
+
+        <div class="row tag-section mx-5 mt-5 pr-5 justify-content-end  pt-4" id="signup">
+
+            <div class=" position-relative mt-5 ">
+                <p class="text-tag">Sign up</p>
+            </div>
+        </div>
+
+        <div class="row  main-signup my-4">
+
+            <div class="col-sm-12">
+
+                <div class="text-area text-center my-4">
+
+                    <h3 class="title-section mb-0">我要報名</h3>
+
+                    <p class="p-text">Enjoy Every Moment of Life</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row form-section ">
+
+            <div class="col-6 col-form-left">
+
+                <div class="form-left my-auto">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="name">姓名 Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="你的名字">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">電話號碼 Phone Number</label>
+                            <input type="text" class="form-control" id="telephone" placeholder="手機號碼">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="courses">花藝課程 Courses </label>
+                            <select class="form-control" id="courses">
+                                <option>月眉型花花圈課程
+                                    <span>10/17 (六) 14:00 ~ 16:00</span>
+                                </option>
+                                <option>歐式壁飾門楣
+                                    <span>10/24 (六) 14:00 ~ 16:00</span>
+                                </option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="attendents">報名人數 Person </label>
+                            <span style="font-size: 0.5rem; color: #DD9976;">＊2人以上9折優惠</span>
+                            <select class="form-control" id="attendents">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>多人</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accnumbers">匯款帳號 Remittance Account </label>
+                            <input type="text" class="form-control" id="accnumbers" placeholder="匯款帳號末5碼">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Messages">備註 Your Messages</label>
+                            <textarea class="form-control" id="Messages" rows="3"></textarea>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="col-6 col-form-right">
+                <div class="form-right ">
+                    <img class="form-pic w-100" src="./IMG/banner/other/form_1.jpeg" alt="我要報名">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SECTION-5:CONTACT -->
+
+    <div class="container">
+
+        <!-- TITLE TAG -->
+
+        <div class="row tag-section mx-5  pr-5 justify-content-end  pt-4" id="contact">
+
+            <div class="position-relative mt-5">
+                <p class="text-tag" style="opacity: 0;">Contact</p>
+            </div>
+        </div>
+
+        <div class="col-12"></div>
+
+    </div>
+
+    <!-- BG -->
+
+    <footer>
+
+        <div class="container-fluid bg-bottom d-flex align-items-end p-0">
+            <div class="row contact-info justify-content-center w-100 m-0">
+
+                <div class="col-sm-12 col-md-4 ">
+
+                    <div class="subscribe-area my-4 mx-5">
+
+                        <h6 class="subscribe-title">訂閱</h6>
+
+                        <div class="input-group my-5 ">
+
+                            <input type="e-mail" class="form-control border-bottom pl-2 w-50 font-weight-light info-p"
+                                placeholder="電郵地址" aria-label="e-mail" aria-describedby="basic-addon1">
+                            <button class="btn btn-light rounded-0 btn-sm mt-0 info-p">
+                                Sign up
+                            </button>
+
+                        </div>
+
+                        <p class="info-p">我想接收有關 LikeLife 喜歡生活的產品、店舖、活動的通訊</p>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-3 ">
+
+                    <div class="catelog-area my-4 mx-5 ">
+
+                        <h6 class="info-title">更多資訊</h6>
+
+                        <div class="d-flex flex-column">
+                            <a class=" text-decoration-none info-a py-2" href="#faq">
+                                常見問題
+                            </a>
+                            <a class=" text-decoration-none info-a py-2" href="#">
+                                條款及細則
+                            </a>
+                            <a class=" text-decoration-none info-a py-2" href="#">
+                                隱私政策
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 col-md-3">
+
+                    <div class="socail-media-area my-4 mx-5 ">
+
+                        <h6 class="socail-media-title">社群媒體</h6>
+
+                        <div class="socail-media-wrap d-flex ">
+
+                            <a class=" socail-media-icon  py-2 mx-2" href="https://www.facebook.com/likelife7/">
+                                <img class="w-100" src="./SVG/facebook.svg" alt="">
+                            </a>
+                            <a class=" socail-media-icon  py-2 mx-2" href="https://www.instagram.com/likelifes/">
+                                <img class="w-100" src="./SVG/instagram.svg" alt="">
+                            </a>
+                            <a class=" socail-media-icon  py-2 mx-2"
+                                href="https://www.youtube.com/channel/UCR749jyQ3-Kzf-1Idz_RvYw">
+                                <img class="w-100" src="./SVG/youtube.svg" alt="">
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="logo-wrap ml-auto my-4 ">
+                        <img src="./SVG/logo_2.svg" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- FIXED BUTTON -->
+
+    <div class="fixed-button position-fixed mr-4">
+        <a class="fixed-up-wrap" href="#top"><img src="./icomoon/SVG/circle-up.svg" alt=""></a>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <script>
+
+
+        let scrollLast = 0;
+        let index = 0;
+
+        // nav 固定與滾動效果
+
+        $(window).scroll(function () {
+            let scrollNow = $(this).scrollTop();
+
+            if (scrollLast < scrollNow) {
+                $('.navbar').addClass('hide');
+            }
+
+            else {
+                $('.navbar').removeClass('hide');
+            }
+            scrollLast = scrollNow;
+
+        })
+
+        // 字體效果
+
+        $(window).on('scroll', function () {
+            let scrollTop = $(this).scrollTop();
+            // console.log('scrollTop:', scrollTop);
+
+            let isMobile = $(this).width() < 768;
+
+            let bn_textY = 0;
+            let Topic3_RightY = 590;
+            let Topic1_TopY = 480;
+            let Topic2_BottomY = 835;
+            let TopicSpan = 880;
+            let videoinfoY = 1400;
+            let lineY = 1800;
+            let iconY = 1935;
+            let deco1Y = 2720;
+            let deco2Y = 2690;
+            let fixedButtonY = 765;
+
+
+            if (isMobile) {
+                bn_textY = 0;
+                Topic3_RightY = 240;
+                Topic1_TopY = 42;
+                Topic2_BottomY = 260;
+                TopicSpan = 465;
+                lineY = 980;
+                deco1Y = 3080;
+                deco2Y = 2200;
+                fixedButtonY = 628;
+            }
+
+            // banner text 效果
+            // if (scrollTop > bn_textY) {
+            //     $('.bn-text').addClass('fade');
+            // }
+
+            // else {
+            //     $('.bn-text').removeClass('fade');
+            // }
+
+            // about-topic3 效果
+            if (scrollTop > Topic3_RightY) {
+                $('.topic3 img').addClass('move');
+
+                // console.log('hi', $('.topic3 img').addClass('move'))
+            }
+            else {
+                $('.topic3 img').removeClass('move');
+
+            }
+
+            // about-topic1 效果
+            if (scrollTop > Topic1_TopY) {
+                $('.topic1 img').addClass('move');
+
+            }
+            else {
+                $('.topic1 img').removeClass('move');
+
+            }
+
+            // about-topic2 效果
+            if (scrollTop > Topic1_TopY) {
+                $('.topic2 img').addClass('move');
+
+            }
+            else {
+                $('.topic2 img').removeClass('move');
+
+            }
+
+            // about-topic-sapn 效果
+            if (scrollTop > TopicSpan) {
+                $('.topic3 span').addClass('fade');
+                $('.topic1 span').addClass('fade');
+                $('.topic2 span').addClass('fade');
+            }
+
+            else {
+                $('.topic3 span').removeClass('fade');
+                $('.topic1 span').removeClass('fade');
+                $('.topic2 span').removeClass('fade');
+            }
+
+            // video-text 效果
+            if (scrollTop > videoinfoY) {
+                $('.video-info').addClass('fade');
+            }
+            else {
+                $('.video-info').removeClass('fade');
+            }
+
+            // line 效果
+            if (scrollTop > lineY) {
+                $('.line').addClass('move');
+            }
+            else {
+                $('.line').removeClass('move');
+            }
+
+            // deco1葉子晃動效果
+            if (scrollTop > deco1Y) {
+                $('.deco1 img').addClass('move');
+            }
+            else {
+                $('.deco1 img').removeClass('move');
+            }
+
+            // deco1葉子晃動效果
+            if (scrollTop > deco1Y) {
+                $('.deco2 img').addClass('move');
+            }
+            else {
+                $('.deco2 img').removeClass('move');
+            }
+
+            // 固定按鈕
+
+            if (scrollTop > fixedButtonY) {
+                $('.fixed-button').addClass('fade');
+            }
+            else {
+                $('.fixed-button').removeClass('fade');
+            }
+
+
+
+        })
+
+
+
+        // slider點點顯示
+
+        $('.slider-dots li').first().css('background', '#fff');
+        $('.slider-dots li').eq(3).css('background', '#fff');
+        $('.img-wrap img').css('opacity', '0');
+        $('.img-wrap img').first().css('opacity', '1');
+        $('.img-wrap img').eq(3).css('opacity', '1');
+
+        $('.slider-dots li').hover(function () {
+
+            $(this).css('background', '#fff').siblings().css('background', 'none');
+
+            let index = $(this).index();
+            // console.log(index);
+            $('.img-wrap img').css('opacity', '0').eq(index).css('opacity', '1');
+
+        })
+
+        // 自動輪播
+
+        setInterval(function () {
+            let isLeft = true;
+            if (isLeft) {
+                if (index >= 3) {
+                    index = 0;
+                }
+            } else {
+                if (index < 3) {
+                    index = 3
+                }
+                else if (index >= 6) {
+                    index = 3;
+                }
+            }
+
+
+            // console.log(index)
+            $('.carousel-section img').eq(index).css('opacity', '1').parent().siblings().children().css('opacity', '0');
+            $('.slider-dots li').eq(index).css('background', '#fff').siblings().css('background', 'none');
+            index += 1;
+
+        }, 2000);
+
+        // SCROLL 效果
+
+        $('.icon-left').on('click', function () {
+
+            let leftOffset = $('.slick-track').offset().left;
+
+            if (leftOffset < 52) {
+                console.log(leftOffset);
+
+                $('.slick-track').css('left', '+=300');
+
+            }
+
+        })
+
+        $('.icon-right').on('click', function () {
+            let rightOffset = $('.slick-track').offset().left;
+
+            if (rightOffset > -967.5) {
+                console.log(rightOffset);
+
+                $('.slick-track').css('left', '-=300');
+
+            }
+
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
