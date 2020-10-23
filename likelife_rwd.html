@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Like Life喜歡生活乾燥花-秋季花藝課程</title>
+    <link rel="shortcut icon" href="./SVG/122679680_3172875336154335_6259916620035903904_n.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="./fontawesome-free-5.15.0-web/css/all.css">
@@ -21,7 +22,6 @@
         body {
             font-family: 'Montserrat', 'Noto Sans TC';
             color: #44442F;
-
         }
 
         p {
@@ -62,6 +62,18 @@
             font-weight: 600;
         }
 
+        .navbar-dark .navbar-toggler {
+            border-color: transparent;
+        }
+
+        .navbar-toggler {
+            margin: 0 .3rem;
+        }
+
+        button:focus {
+
+            outline: 1px solid;
+        }
 
         .cover-area {
             width: 100%;
@@ -88,7 +100,7 @@
             background: url('./SVG/bg-top.svg') no-repeat center center;
             position: relative;
             width: 100%;
-            height: 550px;
+            height: 600px;
             background-size: cover;
             z-index: -1;
             top: 300px;
@@ -125,7 +137,7 @@
 
         .bn-text {
             opacity: 1;
-            transform: translateY(50px);
+            /* transform: translateY(15px); */
             /* transition: 1s ease-out; */
         }
 
@@ -136,7 +148,7 @@
 
         .topic3 img {
             transform: translate(60px, 60px);
-            opacity: 0.3;
+            opacity: 0;
             transition: 2s ease-in-out;
         }
 
@@ -146,8 +158,8 @@
         }
 
         .topic1 img {
-            transform: translate(-80px, -80px);
-            opacity: 0.3;
+            transform: translate(-80px, 0px);
+            opacity: 0;
             transition: 2s ease-in-out;
         }
 
@@ -158,7 +170,7 @@
 
         .topic2 img {
             transform: translate(-90px, 100px);
-            opacity: 0.3;
+            opacity: 0;
             transition: 2s ease-in-out;
         }
 
@@ -173,8 +185,8 @@
         .topic1 span,
         .topic2 span {
             opacity: 0;
-            transform: translateY(-80px);
-            transition: 1s steps(10, end);
+            transform: translateY(-60px);
+            transition: 2s steps(10, end);
         }
 
         .topic3 span.fade,
@@ -244,11 +256,16 @@
             object-position: 0 -50px;
         }
 
+
         .icon-wrap-1 {
             opacity: 0;
             -webkit-transform: translateX(-60px);
             /* transition: 0.6s ease-out; */
-            animation: icon-animation .8s;
+
+        }
+
+        .icon-wrap-1.animation {
+            animation: icon-animation 0.8s;
             animation-delay: 1s;
             animation-fill-mode: forwards;
         }
@@ -257,7 +274,11 @@
             opacity: 0;
             -webkit-transform: translateX(-60px);
             /* transition: 0.6s ease-out; */
-            animation: icon-animation .8s;
+
+        }
+
+        .icon-wrap-2.animation {
+            animation: icon-animation 0.8s;
             animation-delay: 1.5s;
             animation-fill-mode: forwards;
         }
@@ -266,7 +287,11 @@
             opacity: 0;
             -webkit-transform: translateX(-60px);
             /* transition: 0.6s ease-out; */
-            animation: icon-animation .8s;
+
+        }
+
+        .icon-wrap-3.animation {
+            animation: icon-animation 0.8s;
             animation-delay: 2s;
             animation-fill-mode: forwards;
         }
@@ -275,11 +300,17 @@
             opacity: 0;
             -webkit-transform: translateX(-60px);
             /* transition: 0.6s ease-out; */
-            animation: icon-animation .8s;
+
+        }
+
+        .icon-wrap-4.animation {
+            animation: icon-animation 0.8s;
             animation-delay: 2.5s;
             animation-fill-mode: forwards;
             /* 回到最後面 不然會跑到第一個狀態 */
         }
+
+
 
         @-webkit-keyframes icon-animation {
             from {
@@ -305,17 +336,20 @@
             height: 400px;
         }
 
-        .img-wrap {
+        .img-wrap-1,
+        .img-wrap-2 {
             position: absolute;
             left: 0;
         }
 
-        .img-wrap img {
+        .img-wrap-1 img,
+        .img-wrap-2 img {
             /* opacity: 0; */
             transition: .5s;
         }
 
-        .slider-dots li {
+        .slider-dots-1 li,
+        .slider-dots-2 li {
             width: 10px;
             height: 10px;
             margin: 0 4px;
@@ -323,7 +357,8 @@
             border-radius: 50%;
         }
 
-        .slider-dots {
+        .slider-dots-1,
+        .slider-dots-2 {
             bottom: 0;
         }
 
@@ -528,7 +563,7 @@
 
         .fixed-button {
             right: 0;
-            bottom: 20%;
+            bottom: 125px;
             z-index: 5;
             opacity: 0;
             transition: .8s linear;
@@ -602,21 +637,20 @@
 
             .topic3 img {
                 transform: translate(30px, 30px);
-                opacity: 0.3;
+
                 transition: 2s ease-in-out;
             }
 
 
             .topic1 img {
                 transform: translate(-20px, -50px);
-                opacity: 0.3;
                 transition: 2s ease-in-out;
             }
 
 
             .topic2 img {
                 transform: translate(-60px, 80px);
-                opacity: 0.3;
+
                 transition: 2s ease-in-out;
             }
 
@@ -655,7 +689,8 @@
                 height: 100%;
             }
 
-            .img-wrap img {
+            .img-wrap-1 img,
+            .img-wrap-2 img {
                 object-fit: cover;
             }
 
@@ -666,25 +701,25 @@
             }
 
             .deco1 {
-                bottom: -50px;
-                right: 0;
+                bottom: -55px;
+                right: 5%;
             }
 
             .deco1 img {
-                transform: rotate(-40deg);
+                transform: rotate(-15deg);
             }
 
             .deco1 img.move {
-                transform: rotate(20deg);
+                transform: rotate(0deg);
             }
 
-            .deco2 img {
-                transform: rotate(-20deg);
+            /* .deco2 img {
+                transform: rotate(30deg);
             }
 
             .deco2 img.move {
-                transform: rotate(30deg);
-            }
+                transform: rotate(-15deg);
+            } */
 
 
             .carousel-section {
@@ -693,8 +728,10 @@
             }
 
             .course-collection .col-sm-12 {
-                padding-left: 30px;
+                padding-left: 45px;
             }
+
+
 
             .nav-tabs .nav-item {
                 margin: 0 !important;
@@ -707,7 +744,7 @@
 
             .icon-right {
                 margin: 0 15px !important;
-                right: 40%;
+                right: 35%;
             }
 
             .slick-list {
@@ -732,7 +769,7 @@
                 flex: 0 0 100%;
             }
 
-            .fixed-button {}
+
         }
     </style>
 
@@ -816,7 +853,7 @@
 
         <!-- TITLE TAG -->
 
-        <div class="row tag-section pr-5 justify-content-end mx-5 mt-5 " id="about">
+        <div class="row tag-section pr-5 justify-content-end mx-5 mt-5 pt-4" id="about">
 
             <div class=" position-relative mt-5">
                 <p class=" text-tag">About</p>
@@ -1053,16 +1090,16 @@
                             <div class="col-sm-12 col-md-7 course-wrap mt-4 px-0">
 
                                 <div class="carousel-section position-relative mx-auto ">
-                                    <div class="img-box">
-                                        <div class="img-wrap w-100 h-100 img-fluid">
+                                    <div class="img-box-1">
+                                        <div class="img-wrap-1 w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_1.JPG"
                                                 alt="月眉型花花圈">
                                         </div>
-                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                        <div class="img-wrap-1  w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_2.JPG"
                                                 alt="月眉型花花圈">
                                         </div>
-                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                        <div class="img-wrap-1  w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_3.JPG"
                                                 alt="月眉型花花圈">
                                         </div>
@@ -1070,7 +1107,7 @@
 
 
                                     <ul
-                                        class="slider-dots d-flex position-absolute list-unstyled justify-content-center w-100">
+                                        class="slider-dots-1 d-flex position-absolute list-unstyled justify-content-center w-100">
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -1142,23 +1179,23 @@
                             <div class="col-sm-12 col-md-7 course-wrap mt-4 px-0">
 
                                 <div class="carousel-section position-relative mx-auto">
-                                    <div class="img-box">
-                                        <div class="img-wrap w-100 h-100 img-fluid">
+                                    <div class="img-box-2">
+                                        <div class="img-wrap-2 w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_5.JPG"
                                                 alt="歐式壁飾門楣">
                                         </div>
-                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                        <div class="img-wrap-2  w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_6.JPG"
                                                 alt="歐式壁飾門楣">
                                         </div>
-                                        <div class="img-wrap  w-100 h-100 img-fluid">
+                                        <div class="img-wrap-2  w-100 h-100 img-fluid">
                                             <img class="w-100 h-100" src="./IMG/banner/course/course_7.JPG"
                                                 alt="歐式壁飾門楣">
                                         </div>
                                     </div>
 
                                     <ul
-                                        class="slider-dots d-flex position-absolute list-unstyled justify-content-center w-100">
+                                        class="slider-dots-2 d-flex position-absolute list-unstyled justify-content-center w-100">
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -1265,8 +1302,8 @@
 
         <!-- COLLECTION SLIDER  -->
 
-        <div class="slick-list draggable mx-auto position-relative ">
-            <div class="slick-track d-flex align-items-end position-absolute">
+        <div class="slick-list draggable mx-auto position-relative">
+            <div class=" slick-track d-flex align-items-end position-absolute">
 
                 <div class="carousel--card mx-3">
                     <img class="w-100 img-fluid" src="./IMG/banner/share/classroom_1.jpg" alt="">
@@ -1521,6 +1558,13 @@
                             <textarea class="form-control" id="Messages" rows="3"></textarea>
                         </div>
 
+                        <div class="text-btn d-flex justify-content-center ">
+                            <a class="btn btn-outline-secondary rounded-0 mt-3 px-5 text-decoration-none"
+                                href="#signup">
+                                +點我報名
+                            </a>
+                        </div>
+
                     </form>
 
                 </div>
@@ -1540,18 +1584,21 @@
 
     <!-- SECTION-5:CONTACT -->
 
+    <!-- TITLE TAG -->
+
     <div class="container">
 
-        <!-- TITLE TAG -->
-
-        <div class="row tag-section mx-5  pr-5 justify-content-end  pt-4" id="contact">
+        <!-- <div class="row tag-section mx-5  pr-5 justify-content-end  pt-4" >
 
             <div class="position-relative mt-5">
                 <p class="text-tag" style="opacity: 0;">Contact</p>
             </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-12 my-5"></div>
         </div>
 
-        <div class="col-12"></div>
 
     </div>
 
@@ -1559,7 +1606,7 @@
 
     <footer>
 
-        <div class="container-fluid bg-bottom d-flex align-items-end p-0">
+        <div class="container-fluid bg-bottom d-flex align-items-end p-0" id="contact">
             <div class="row contact-info justify-content-center w-100 m-0">
 
                 <div class="col-sm-12 col-md-4 ">
@@ -1679,40 +1726,55 @@
                 $('.navbar').removeClass('hide');
             }
             scrollLast = scrollNow;
+        })
+
+        // nav 展開後消失
+
+        $(window).on('scroll', function () {
+
+            $('.navbar-collapse').removeClass('show');
 
         })
+
+        $('.navbar-nav .nav-item').on('click', function () {
+            $('.navbar-collapse').removeClass('show');
+
+        })
+
 
         // 字體效果
 
         $(window).on('scroll', function () {
             let scrollTop = $(this).scrollTop();
-            // console.log('scrollTop:', scrollTop);
+            console.log('scrollTop:', scrollTop);
 
             let isMobile = $(this).width() < 768;
 
             let bn_textY = 0;
-            let Topic3_RightY = 590;
+            let Topic3_RightY = 480;
             let Topic1_TopY = 480;
             let Topic2_BottomY = 835;
-            let TopicSpan = 880;
-            let videoinfoY = 1400;
+            let TopicSpan = 530;
+            let videoinfoY = 1200;
             let lineY = 1800;
             let iconY = 1935;
             let deco1Y = 2720;
-            let deco2Y = 2690;
-            let fixedButtonY = 765;
+            let deco2Y = 2350;
+            let fixedButtonY = 1200;
+            let animationY = 1850;
 
 
             if (isMobile) {
                 bn_textY = 0;
-                Topic3_RightY = 240;
-                Topic1_TopY = 42;
-                Topic2_BottomY = 260;
+                Topic3_RightY = 355;
+                Topic1_TopY = 350;
+                Topic2_BottomY = 450;
                 TopicSpan = 465;
                 lineY = 980;
                 deco1Y = 3080;
-                deco2Y = 2200;
+                deco2Y = 2340;
                 fixedButtonY = 628;
+                animationY = 1140;
             }
 
             // banner text 效果
@@ -1809,85 +1871,174 @@
                 $('.fixed-button').removeClass('fade');
             }
 
+            // icon-wrap 動畫效果
 
+            if (scrollTop > animationY) {
+                $('.icon-wrap-1').addClass('animation');
+                $('.icon-wrap-2').addClass('animation');
+                $('.icon-wrap-3').addClass('animation');
+                $('.icon-wrap-4').addClass('animation');
+            }
 
+            else {
+                $('.icon-wrap-1').removeClass('animation');
+                $('.icon-wrap-2').removeClass('animation');
+                $('.icon-wrap-3').removeClass('animation');
+                $('.icon-wrap-4').removeClass('animation');
+            }
         })
 
 
 
-        // slider點點顯示
+        // slider點點顯示 (左頁籤)
 
-        $('.slider-dots li').first().css('background', '#fff');
-        $('.slider-dots li').eq(3).css('background', '#fff');
-        $('.img-wrap img').css('opacity', '0');
-        $('.img-wrap img').first().css('opacity', '1');
-        $('.img-wrap img').eq(3).css('opacity', '1');
 
-        $('.slider-dots li').hover(function () {
+        $('.slider-dots-1 li').first().css('background', '#fff');
+
+        $('.img-wrap-1 img').css('opacity', '0');
+        $('.img-wrap-1 img').first().css('opacity', '1');
+        // $('.img-wrap-1 img').eq(3).css('opacity', '1');
+
+        $('.slider-dots-1 li').hover(function () {
 
             $(this).css('background', '#fff').siblings().css('background', 'none');
 
             let index = $(this).index();
             // console.log(index);
-            $('.img-wrap img').css('opacity', '0').eq(index).css('opacity', '1');
+            $('.img-wrap-1 img').css('opacity', '0').eq(index).css('opacity', '1');
 
         })
 
-        // 自動輪播
+        // 自動輪播 (左頁籤)
 
+
+        let imgIndex = 0;
         setInterval(function () {
-            let isLeft = true;
-            if (isLeft) {
-                if (index >= 3) {
-                    index = 0;
-                }
-            } else {
-                if (index < 3) {
-                    index = 3
-                }
-                else if (index >= 6) {
-                    index = 3;
-                }
+
+            // 左頁籤與右頁籤的判斷式<如果是將照片與點點命名同一個CLASS的名字>
+
+            // let isLeft = true;
+            // if (isLeft) {
+            //     if (index >= 3) {
+            //         index = 0;
+            //     }
+            // } else {
+            //     if (index < 3) {
+            //         index = 3
+            //     }
+            //     else if (index >= 6) {
+            //         index = 3;
+            //     }
+            // }
+
+            if (imgIndex > 2) {
+                imgIndex = 0;
             }
 
+            $('.img-wrap-1 img').eq(imgIndex).css('opacity', '1').parent().siblings().children().css('opacity', '0');
+
+            let dotsIndex = (imgIndex > 2) ? 0 : imgIndex
+
+            $('.slider-dots-1 li').eq(dotsIndex).css('background', '#fff').siblings().css('background', 'none');
+
+
+
+            imgIndex += 1;
+
+        }, 2000);
+
+
+
+
+        // slider點點顯示 (右頁籤)
+
+        $('.slider-dots-2 li').first().css('background', '#fff');
+
+        $('.img-wrap-2 img').css('opacity', '0');
+        $('.img-wrap-2 img').first().css('opacity', '1');
+        // $('.img-wrap-2 img').eq(3).css('opacity', '1');
+
+        $('.slider-dots-2 li').hover(function () {
+
+            $(this).css('background', '#fff').siblings().css('background', 'none');
+
+            let index = $(this).index();
+            // console.log(index);
+            $('.img-wrap-2 img').css('opacity', '0').eq(index).css('opacity', '1');
+
+        })
+
+        let img2Index = 0;
+
+        // 自動輪播 (右頁籤)
+        setInterval(function () {
+
+
+            if (img2Index > 2) {
+                img2Index = 0;
+            }
 
             // console.log(index)
-            $('.carousel-section img').eq(index).css('opacity', '1').parent().siblings().children().css('opacity', '0');
-            $('.slider-dots li').eq(index).css('background', '#fff').siblings().css('background', 'none');
-            index += 1;
+            $('.img-wrap-2 img').eq(img2Index).css('opacity', '1').parent().siblings().children().css('opacity', '0');
+
+            let dots2Index = (img2Index > 2) ? 0 : img2Index
+
+            $('.slider-dots-2 li').eq(dots2Index).css('background', '#fff').siblings().css('background', 'none');
+
+            img2Index += 1;
 
         }, 2000);
 
         // SCROLL 效果
 
+
         $('.icon-left').on('click', function () {
+
 
             let leftOffset = $('.slick-track').offset().left;
 
-            if (leftOffset < 52) {
-                console.log(leftOffset);
+            let isMobile = $(window).width() < 768;
+
+            let leftX = 52;
+
+
+            if (isMobile) {
+                leftX = 0;
+            }
+
+            if (leftOffset < leftX) {
+
 
                 $('.slick-track').css('left', '+=300');
+                // console.log("left", leftOffset);
 
             }
 
         })
 
         $('.icon-right').on('click', function () {
+
+
             let rightOffset = $('.slick-track').offset().left;
 
-            if (rightOffset > -967.5) {
-                console.log(rightOffset);
 
+            let isMobile = $(window).width() < 768;
+
+            let rightX = -916.5
+
+            if (isMobile) {
+                rightX = -2100;
+            }
+
+            if (rightOffset > rightX) {
+                console.log("right", rightOffset);
+                // console.log("right", rightX);
                 $('.slick-track').css('left', '-=300');
+
 
             }
 
         })
-
-
-
-
 
 
     </script>
