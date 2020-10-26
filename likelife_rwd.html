@@ -75,6 +75,12 @@
             outline: 1px solid;
         }
 
+        .banner-entry {
+            padding: 0;
+            margin: 0;
+        }
+
+
         .cover-area {
             width: 100%;
             height: 500px;
@@ -83,6 +89,10 @@
             background-attachment: fixed;
             top: 50px;
 
+        }
+
+        .cover-area-wrap {
+            padding: 0;
         }
 
         /* .cover-area::after {
@@ -598,7 +608,26 @@
             }
 
             .bn-text {
-                transform: translateY(100px);
+                transform: translateY(60px);
+            }
+
+            .banner-entry {
+                padding: 0;
+                margin: 0;
+            }
+
+            .cover-area {
+                width: 100%;
+                height: 500px;
+                background: url("./IMG/banner/about/cover.jpg") no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+                top: 20px;
+
+            }
+
+            .cover-area-wrap {
+                padding: 0;
             }
 
             .text-tag::after {
@@ -817,12 +846,12 @@
 
     <!-- BANNER ENTRY -->
 
-    <div class="container-fluid" id="top">
+    <div class="container-fluid banner-entry" id="top">
 
-        <div class="row cover-section position-relative">
+        <div class="rowcover-section position-relative">
 
-            <div class="col-12 cover-area position-absolute">
-
+            <div class="col-12 cover-area-wrap position-absolute">
+                <div class="cover-area "></div>
             </div>
 
             <!-- BG -->
