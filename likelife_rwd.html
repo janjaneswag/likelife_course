@@ -585,7 +585,44 @@
 
         }
 
-        @media (max-width: 768px) {
+
+        @media screen and (min-width: 768px) and (max-width: 1025px) {
+            .cover-area {
+                background-attachment: unset;
+            }
+
+            .topic3 {
+                height: 400px;
+            }
+
+            .icon {
+                width: 150px;
+                height: 150px;
+            }
+
+
+            .deco1 {
+                display: none;
+            }
+
+            .carousel-section {
+                width: 100%;
+                height: 300px;
+                margin-top: 50px;
+            }
+
+            .slick-list {
+                width: 100%;
+            }
+
+            .subscribe-area {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+
+
+        @media screen and (max-width: 767px) {
 
             .h3,
             h3 {
@@ -619,11 +656,10 @@
             .cover-area {
                 width: 100%;
                 height: 100%;
-                /* height: 500px; */
                 background: url("./IMG/banner/about/cover.jpg") no-repeat center center;
                 background-size: cover;
                 /* background-attachment: fixed; */
-                /* top: 150px; */
+
 
             }
 
@@ -716,9 +752,8 @@
                 height: 70px;
             }
 
-            .carousel-section {
+            .slick-list {
                 width: 100%;
-                height: 100%;
             }
 
             .img-wrap-1 img,
@@ -733,6 +768,7 @@
             }
 
             .deco1 {
+                display: block;
                 bottom: -55px;
                 right: 5%;
             }
@@ -779,9 +815,7 @@
                 right: 35%;
             }
 
-            .slick-list {
-                width: 100%;
-            }
+
 
             .card-body span {
                 font-size: 1rem !important;
@@ -1163,7 +1197,7 @@
                             </div>
 
                             <!-- 頁籤內容-右邊 -->
-                            <div class="col-sm-12 col-md-5 course-content my-auto ">
+                            <div class="col-sm-12 col-md-5 course-content my-auto pr-0">
                                 <div class="content-wrap px-3">
 
                                     <div class="course-date mt-5 px-2 ">
